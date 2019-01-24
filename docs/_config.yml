@@ -12,6 +12,11 @@ timezone: America/Chicago
 # Build settings
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 
 collections:
   assignments:
