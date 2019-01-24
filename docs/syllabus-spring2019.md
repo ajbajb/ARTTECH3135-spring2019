@@ -1,30 +1,35 @@
+---
+layout: page
+title: Syllabus
+permalink: /syllabus/
+---
 ## Interactive Art / Creative Code, ARTTECH 3135
 
-Semester, Year
+__Semester, Year__
 :   Spring, 2019
 
-Meeting Times
+__Meeting Times__
 :   Thursdays 9am-4pm
 
-Meeting Location
+__Meeting Location__
 :   MacLean 401
 
-Instructor
+__Instructor__
 :   Adam Bach
 
-Teaching Assistant
+__Teaching Assistant__
 :   TBA
 
-TA hours
+__TA hours__
 :   TBA
 
-Class Forum
-:   [https://ats.community/c/courses/arttech-3135](https://ats.community/c/courses/arttech-3135)
+__Class Forum__
+:   [https://ats.community](https://ats.community)
 
-Class Website
-:   [https://ajbajb.github.io/ARTTECH3135-spring2019/](https://ajbajb.github.io/ARTTECH3135-fall2018/)
+__Class Website__
+:   [https://ajbajb.github.io/ARTTECH3135-spring2019/](https://ajbajb.github.io/ARTTECH3135-fall2019/)
 
-Code Examples
+__Code Examples__
 :   [https://github.com/ajbajb/ARTTECH3135-spring2019/](https://github.com/ajbajb/ARTTECH3135-spring2019/)
 
 ### Course Description
@@ -82,10 +87,11 @@ Students wait-listed for classes will be admitted on a space available basis det
 
 ### Special Needs
 [Disability and Learning Resource Center](http://www.saic.edu/lifeatsaic/wellnesscenter/disabilityandlearningresourcecenter/)
-___
-### Course Schedule
 
-#### Session 00 -- Jan 24 2019
+___
+## Course Schedule
+
+### Session 00 -- Jan 24 2019
 - Introduction to Creative Code
 - Survey of some Art
     - Here is an incomplete [list]().        
@@ -122,27 +128,26 @@ ___
         - IDE- Atom
         - atom-live-server
         - p5 Reference
+        - sign up for a p5 editor account
 - Inspiration
     - [http://eyeofestival.com/](https://vimeo.com/eyeofestival/videos)
     - such as [Robert Hodgin's Talk](https://vimeo.com/channels/eyeo2014/103537259)
 
-##### Homework
+__Assignment__
 - Sol Lewitt Renderings
-- break stuff
 
-##### Readings
+__Readings__
 - [What is Code?](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
 - [Computer Art History](http://www.vam.ac.uk/content/articles/a/computer-art-history/)
+
 ___
-#### Session 01 -- Jan 31 2019
+### Session 01 -- Jan 31 2019
 ##### Drawing
 - Color and color modes
     - `lerpColor(...)`
 - Shapes
 - push & pop
     - 2D Transformations
-- 10print
-
 - Color References
     - [Interaction of Colors, by Josef Albers](http://www.g-e-s-t-a-l-t.org/MEDIA/PDF/Interaction-of-Color.pdf)
     - some really technical readings on color as it applies to perception and computer vision
@@ -150,21 +155,31 @@ ___
         - [Computer Vision: A Modern Approach](http://cmuems.com/excap/readings/forsyth-ponce-computer-vision-a-modern-approach.pdf#page=68)
         - [Computer Vision: Algorithms & Applications](http://szeliski.org/Book/drafts/SzeliskiBook_20100903_draft.pdf#page=102)
 
-__Homework__
-- Still Life
+__Assignment__
+- Still Life Rendering
+
+__Readings__
+[Field Guide to Debugging](https://p5js.org/learn/debugging.html)
+
 ___
-#### Session 02 -- Feb 07 2019
-##### Drawing: part 2
+### Session 02 -- Feb 07 2019
+##### Drawing: Part 2
 - Events
     - interaction with mouse and keyboard
     - sound playback
 - loading, displaying, simple manipulation of images
-- Save frames
+- Saving frames
 
-###### Homework
+__Assignment__
 - Interactive Drawing Application
+- check out [BBC sound archive](http://bbcsfx.acropolis.org.uk/)
+
+__Readings__
+- Golan Levin [Clock Lecture](https://github.com/golanlevin/lectures/tree/master/lecture_clock)
+- Golan Levin [Loops](https://github.com/golanlevin/lectures/blob/master/lecture_loops/README.md)
+
 ___
-#### Session 03 -- Feb 14 2019
+### Session 03 -- Feb 14 2019
 ##### Animation
 - Topics
     - periodic Signals
@@ -179,70 +194,102 @@ ___
         - `map(...)`
         - `lerp(...)`
 
-__Inspiration__
-- Golan Levin [Clock Lecture](https://github.com/golanlevin/lectures/tree/master/lecture_clock)
-- Golan Levin [Loops](https://github.com/golanlevin/lectures/blob/master/lecture_loops/README.md)
-
-__Homework__
+__Assignment__
 - Animated Interpretive Clock
+
+__Readings__
+- [Nature of Code, Vectors](https://natureofcode.com/book/chapter-1-vectors/)
+- [Nature of Code, Forces](https://natureofcode.com/book/chapter-2-forces/)
+
 ___
-#### Session 04 -- Feb 21 2019
+### Session 04 -- Feb 21 2019
 __Animation Cont - Forces/vectors__
 - velocity, acceleration, drag
 - forces:
     - attraction / gravity
 - Tweening/Easing
 
-###### Homework
+__Assignment__
+- TBD
+
+__Readings__
+- Flong reading http://www.flong.com/texts/essays/essay_cvad/
 
 ___
-#### Session 05 -- Feb 28 2019
+### Session 05 -- Feb 28 2019
+##### Intro Computer Vision
+- Camera/ Video Manipulation
+    - Pixels
+    - Video FX
+    - apply video to plane primitive as a texture
+
+__Inspiration__
+- [Slit Scan Imaging](https://makezine.com/2017/10/26/emulate-slit-scan-photography-for-beautifully-weird-images/)
+- [more Slit Scan](http://www.flong.com/texts/lists/slit_scan/)
+
+__Assignment__
+- TBD
+
+__Readings__
+- Olia Lialina ["Rich use Experience, UI, and Desktopization of War"](http://contemporary-home-computing.org/RUE/)
+- ofBook Sound
+
+___
+### Session 06 -- Mar 07 2019
 ##### Sound
 - Sound Synthesis
-    - p5.sound
     - tone.js
     - speech
 - Interaction with sound
     - amplitude
     - FFT / pitch
-___
-#### Session 06 -- Mar 07 2019
-##### Basic Computer Vision
-- Camera/ Video Manipulation
-    - Pixels
-    - Video FX
-    - apply video to plane primitive as a texture
-    - [Slit Scan Imaging](https://makezine.com/2017/10/26/emulate-slit-scan-photography-for-beautifully-weird-images/)
-    - [more Slit Scan](http://www.flong.com/texts/lists/slit_scan/)
 
-__Readings__
-- Flong reading http://www.flong.com/texts/essays/essay_cvad/
+__Assignment__
+- Mid-Term Projects
+
 ___
 #### Mar 14 2019 - NO CLASS - spring break
+
 ___
-#### Session 07 -- Mar 21 2019
+### Session 07 -- Mar 21 2019
 ##### Computer Vision Cont.
 - thresholding
 - background subtraction/masking
 - color differencing
+- "Mid-Term" Projects due.
+
+__Assignment__
+- TBD
+
+__Readings__
+[Kyle McDonald, Face as Interface](https://github.com/kylemcdonald/AppropriatingNewTechnologies/wiki/Week-2)
+
 ___
 #### Mar 28 2019 - NO CLASS - critique week
+
 ___
-#### Session 08 -- Apr 04 2019
+### Session 08 -- Apr 04 2019
 - Face Detection & Tracking?
 - Kinect?
 - Final Project Proposals Due
+
+- ATS Open House?
+
 ___
-#### Session 09 -- Apr 11 2019
+### Session 09 -- Apr 11 2019
 ##### Class Lab Day
+
 ___
-#### Session 10 -- Apr 25 2019
+### Session 10 -- Apr 25 2019
 ##### Class Lab Day
+
 ___
-#### Session 11 -- May 02 2019
+### Session 11 -- May 02 2019
 ##### Final Projects Due & Critique
+
 ___
-#### Session 12 -- May 09 2019
+### Session 12 -- May 09 2019
 ##### Final Projects Documentation
-- Bring your camera
+- Bring your camera :)
+
 ___

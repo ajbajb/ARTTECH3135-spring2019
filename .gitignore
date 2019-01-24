@@ -1,0 +1,18 @@
+# jekyll
+_site
+*.sass-cache
+*.jekyll-metadata
+
+__*
+
+# Xcode
+*.pbxuser
+*.perspectivev3
+xcuserdata
+build
+*.app
+#*.a
+
+# OSX
+.DS_Store
+.AppleDouble
