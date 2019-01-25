@@ -9,6 +9,7 @@ permalink: /resources/
 - [p5js wiki](https://github.com/processing/p5.js/wiki/p5.js-overview)
 - [The Coding Train](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
 - [JavaScript MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JavaScript: The Good Parts](https://7chan.org/pr/src/OReilly_JavaScript_The_Good_Parts_May_2008.pdf)
 - [You Don't know JS](https://github.com/getify/You-Dont-Know-JS)
 
 ### Terminal / Command Line

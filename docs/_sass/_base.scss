@@ -9,7 +9,11 @@
 
 /* Basic Styling
  * ============================================== */
+    html {
+        min-height: 100%;
+    }
     body {
+        min-height: 100%;
         font-family: $base-font-family;
         font-size: $base-font-size;
         line-height: $base-line-height;
@@ -22,22 +26,29 @@
 
         -webkit-text-size-adjust: 100%;
 
-        -webkit-animation: filter-animation 120s infinite;
-        animation: filter-animation 120s infinite;
+        // -webkit-animation: filter-animation 120s infinite;
+        // animation: filter-animation 120s infinite;
 
     }
 
-    @-webkit-keyframes filter-animation {
+    .hueRotate {
+
+        -webkit-animation: filter-animation 200s infinite;
+        animation: filter-animation 200s infinite;
+
+    }
+
+    @keyframes filter-animation {
   0% {
-    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
   }
 
   50% {
-    -webkit-filter: hue-rotate(340deg);
+    filter: hue-rotate(340deg);
   }
 
   100% {
-    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
   }
 }
 
@@ -96,11 +107,11 @@
 /* Links
  * ============================================== */
     a {
-        color: darken($brand-color, 5%);
+        color: $brand-color;
         text-decoration: none;
 
         &:hover {
-            color: $brand-color;
+            filter: hue-rotate(90deg);
             text-decoration: none;
         }
     }
