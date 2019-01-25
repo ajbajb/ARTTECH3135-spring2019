@@ -26,13 +26,11 @@ var y; // declare a variable
 y = x + 120;
 
 console.log( y ); // prints 320 to the console
-
 ```
 
 variables can also be _reassigned_
 
 ```javascript
-
 console.log( x ); // prints 200
 
 x = 5;
@@ -46,16 +44,14 @@ console.log( y ); // y is now 125
 x = x + 20;
 
 console.log ( x ); // prints 25. x has the value of 25
-
 ```
 
-You might be thinking "uhh, thats weird, why not write, x + 20 = x " and "whaa, how can x equal itself plus 20?"  The reason for this is because the '=' symbol doesn't mean 'equals', but is closer in meaning to "gets the value of". So, this statement `x = x + 20` would translate to: ' x gets the value of x plus twenty', or 'x gets assigned the value of itself plus twenty'. '=' is not about equality but about assignment. '=' is the assignment operator and will assign the value of what is on the right-hand side to what is on the left-hand side.  To test for equality we use `===`, or three equal signs.
+You might be thinking "uhh, thats weird, why not write, x + 20 = x?" and "whaa, how can x equal itself plus 20?"  The reason for this is because the `=` symbol doesn't mean 'equals', but is closer in meaning to "gets the value of". So, this statement `x = x + 20` would translate to: 'x gets the value of x plus twenty', or 'x gets assigned the value of whats currently stored as x plus twenty'. `=` is not about equality but about assignment. `=` is the assignment operator and will _assign the value of what is on the right-hand side to what is on the left-hand side_.  To test for equality we use `===`, or three equal signs.
 
 ```javascript
 console.log(x === 25) // true!
 
 console.log( x === y ) // nope!, false   
-
 ```
 
 So back to color, we talked about coloring our shapes like this:
@@ -85,7 +81,6 @@ and now we have a _stored color_ in a variable that we can use throughout our pr
 For example, say I was trying to render Instruction #1 which makes use of four colors.  I could do something like:
 
 ```javascript
-
 function setup() {
 
     createCanvas( 400, 400 );
@@ -115,7 +110,6 @@ something like that.
 If you know about `for()` loops, you can use that to simplify your code.  We will talk about `for()` loops next class, but try it out:
 
 ```javascript
-
 function setup() {
 
     createCanvas( 400, 400 );
