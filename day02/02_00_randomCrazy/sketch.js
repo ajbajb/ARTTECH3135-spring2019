@@ -23,3 +23,6 @@ function draw() {
     ellipse( width / 2, height / 2, 100, 100 );
 
 }
+
+// these random techniques come from Zach Lieberman
+// https://www.instagram.com/zach.lieberman/

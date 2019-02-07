@@ -37,3 +37,6 @@ function draw() {
     // every draw loop ( so you see no change )
 
 }
+
+// these random techniques come from Zach Lieberman
+// https://www.instagram.com/zach.lieberman/

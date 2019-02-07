@@ -48,6 +48,5 @@ function draw() {
 
 }
 
-function keyPressed() {
-
-}
+// these random techniques come from Zach Lieberman
+// https://www.instagram.com/zach.lieberman/

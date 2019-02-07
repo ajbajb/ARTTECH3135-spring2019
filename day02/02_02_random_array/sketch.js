@@ -1,6 +1,6 @@
 //
 
-
+// a look at arrays
 // let array = [ 45, 57, 63.777, 20, 56.01 ];
 // console.log( array );
 //
@@ -41,8 +41,6 @@ function setup() {
 
     console.log( elegantRandom );
 
-
-
 }
 
 function draw() {
@@ -70,3 +68,6 @@ function keyPressed() {
     }
 
 }
+
+// these random techniques come from Zach Lieberman
+// https://www.instagram.com/zach.lieberman/
