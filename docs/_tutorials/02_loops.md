@@ -3,7 +3,7 @@ layout: page
 title: a bit about loops
 ---
 
-Whenever we are writing code and we see ourselves writing pretty much the same thing over and over again, we should ask ourselves, "Is there another, shorter way to write this? Is there a code construct that can work for me?"  The answer is probably, yes.  What we need is a _loop_.  I will discuss three different ways we can write a loop. The last, a `for()` loop, being what we discussed in class and is the loop i tend to use most often.
+Whenever we are writing code and we see ourselves writing pretty much the same thing over and over again, we should ask ourselves, "Is there another, shorter way to write this? Is there a code construct that can work for me?"  The answer is probably, yes.  What we probably need is a _loop_.  I will discuss three different ways we can write a loop. The last, a `for()` loop, being what we discussed in class and is the loop I tend to use most often.
 
 Lets first take a snippet of code that is written without using a loop.
 Say, for example, you are drawing multiple vertical lines on your canvas.
