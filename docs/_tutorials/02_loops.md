@@ -65,7 +65,7 @@ line( x, 0, x, height );
 
 // etc
 ```
-#### `while`
+### `while`
 A clearer and more efficient way to write the above is to use a `while()` loop. A `while` loop tests a condition inside of its parenthesis.  As long as the condition evaluates to true, the loop while continue and the code written inside the `{}` will be repeated. For example:
 
 ``` javascript
@@ -79,7 +79,7 @@ while( x < height ) {           // x is currently 5, therefore it is less than t
 ```
 
 The loop will continue to run for as long as the condition inside the parenthesis is true.
-The second statement in the loop code block adds 5 to the variable x.  This statement is _really_ important, as it increases the value of x, eventually making it greater than height, and therefore, the condition would evaluate to false. If we did not increment the value of x _inside_ the loop then this `while()` loop would run infinitely, since the condition would always evaluate to `true`. __Don't create infinite loops!__
+The second statement in the loop code block adds 5 to the variable x.  This statement is _really_ important, as it increases the value of x, eventually making it greater than height, and therefore, the condition would evaluate to false so we break out of the loop. If we did not increment the value of x _inside_ the loop then this `while()` loop would run infinitely, since the condition would always evaluate to `true`. __Don't create infinite loops!__
 
 ``` javascript
 let x = 5; // our "counter"
@@ -96,9 +96,9 @@ Code outside your loop will never be evaluated while your loop continues.  So, i
 
 `while()` loops are really great if you do not know how many times you want your loop to run.  It should continue to run for as long as the condition is met.
 
-#### `do...while`
+### `do...while`
 
-The key difference between a `while` and a `do...while` is that the statements in the code block come _before_ the condition, so the code in the loop is guruteed to run at least once.  
+The key difference between a `while` and a `do...while` is that the statements in the code block come _before_ the condition, so the code in the loop is guaranteed to run at least once.  
 
 ```javascript
 let x = 50;         // our counter
@@ -110,15 +110,15 @@ do {
 
 } while ( x < 40 );   // condition
 ```
-In the above code, x is already greater than 40, so the condition in the while parenthesis will evaluate to false. Regardless, one line will be drawn since  the block containing that command occurs before the test condition.
+In the above code, x is already greater than 40, so the condition in the while parenthesis will evaluate to false. Regardless, one line will be drawn since the block containing that command occurs before the test condition in `do` block.
 
 
 ### `for()`
 
 You usually need 3 elements for a `while` and `do...while` loop.
 1. a counter
-2. condition
-3. update
+2. a condition
+3. an update
 
 The `for` loop combines all three of these elements within the statement declaration, each separated by a `;`.
 
@@ -137,7 +137,6 @@ for ( let x = 5; x < width; x += 5 ) {
 
 }
 ```
-
 Within the parenthesis of the for loop, there are 3 statements. The first,
 `let x = 5;`
 we declare a variable that will be our counter.
@@ -151,8 +150,8 @@ is our update statement and increments our counter.
 The logic of the `for` loop works like this:
 
 1. set the initial value of the counter.
-2. test if it meets our condition, `true` or `false`.
-3. If `true`, evaluate the statements in the block of code. If `false` don't evaluate and move on
+2. test if the counter meets our condition, `true` or `false`.
+3. If `true`, evaluate the statements in the block of code. If `false` don't evaluate and move out of the loop.
 4. After evaluating the block, execute the update portion of the `for` loop, changing the value of our counter.
 5. go back to 2. start loop over.
 
@@ -163,11 +162,9 @@ Helpful links
 - [MDN for loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [w3 schools](https://www.w3schools.com/js/js_loop_for.asp)
 
-
-
 Lets look at another example.  
 
-If I wanted to create a circle somewhere on my canvas, I would do something like this:
+If I wanted to create a circle somewhere on my canvas, I might do something like this:
 
 ```javascript
 function draw() {
@@ -186,7 +183,7 @@ function draw() {
 
 ![a single red circle]({{ "/assets/images/singleRedCircle.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
 
-and if i wanted to make another circle right next to the one i just drew, I might do something like this:
+and if i wanted to make another circle right next to the one I just drew, I might do something like this:
 ```javascript
 function draw() {
 
@@ -209,7 +206,7 @@ where I give xPos the value of 20, draw a circle, then add 10 to the value of xP
 
 ![Two red circles]({{ "/assets/images/twoRedCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
 
-Super. so far so good, but what if I wanted to fill the entire _width_ of the canvas with red circles? Do I need to continuously copy and paste the commands to set xPos and draw a circle? like:
+Super. so far so good, but what if I wanted to fill the entire _width_ of the canvas with red circles? Do I need to continuously copy and paste the commands to set `xPos` and draw a circle? like:
 
 ```javascript
 function draw() {
@@ -223,15 +220,15 @@ function draw() {
     fill( 255, 0, 0 );
     ellipse( xPos, yPos, 10, 10 );
 
-    // 2
+    // 2nd circle
     xPos = xPos + 10;
     ellipse( xPos, yPos, 10, 10 );
 
-    // 3
+    // 3rd
     xPos = xPos + 10;
     ellipse( xPos, yPos, 10, 10 );
 
-    // 4
+    // 4th
     xPos = xPos + 10;
     ellipse( xPos, yPos, 10, 10 );
 
@@ -240,9 +237,9 @@ function draw() {
 }
 ```
 
-and etc, etc, etc until I fill the width of the canvas. This would certainly draw a row of circles, but this is not the best approach. It is time consuming, error prone, and really difficult to go back and augment. A better approach would be to use a for() loop.
+and etc, etc, etc until I fill the width of the canvas. This would certainly draw a row of circles, but this is not the best approach. It is time consuming, error prone, and really difficult to go back and augment. A better approach would be to use a `for()` loop.
 
-When creating a for() loop, you'll remember there are three parts:
+When creating a `for()` loop, you'll remember there are three parts:
 1. the counter
 2. condition
 3. update
@@ -258,15 +255,16 @@ for ( counter, condition, update ) {
 }
 ```
 
-With this for() loop we will:
+With this `for()` loop we will:
 1. set the counter to correspond to the xPos of the circles.
 2. the condition is where we would like the counter to stop, in this case when we reach `width`
 3. we will update the counter to be how far apart the circles will be drawn, the vertical spacing
 
-So, we have a for() loop that loops like:
+So, we have a `for()` loop that looks like:
 
 ```javascript
 function draw() {
+
     background( 150 );
     let yPos = 20;
 
@@ -302,6 +300,7 @@ function draw() {
 
 }
 ```
+
 gives us a new color for each circle.
 ![a row of red circles]({{ "/assets/images/rowRandomColorCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
 
@@ -348,6 +347,7 @@ and look at the console output:
 ![a row of red circles]({{ "/assets/images/console_ij.png" | prepend: site.baseurl }}){:height="390px" width="140px"}
 
 We see that for every __one__ cycle of the outer loop (the `i` loop), we go through the entire 5 iterations of the inner loop (the `j` loop).
+- Back to our circles-
 Think about it this way: one loop will take care of our x positions (columns) and one loop will take care of our y positions (rows).  So, the outer loop happens, say its the "x position" loop, we enter it and encounter the y position loop.  We draw circles for every y position at that x position ( filling in an entire column of circles). We then move on and advance the x position counter filling in the next column of circles.
 
 ```javascript
@@ -366,6 +366,7 @@ function draw() {
 
 }
 ```
+
 ![a row of red circles]({{ "/assets/images/gridCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
 
 _warning_
