@@ -266,13 +266,16 @@ With this for() loop we will:
 So, we have a for() loop that loops like:
 
 ```javascript
+function draw() {
+    background( 150 );
+    let yPos = 20;
 
-let yPos = 20;
+    fill( 255, 0, 0 );
+    for ( let xPos = 10; xPos < width; xPos += 10 ) {
 
-fill( 255, 0, 0 );
-for( let xPos = 10; xPos < width; xPos += 10 ) {
+        ellipse( xPos, yPos, 10, 10 );
 
-  ellipse( xPos, yPos, 10, 10 );
+    }
 
 }
 ```
@@ -280,4 +283,90 @@ for( let xPos = 10; xPos < width; xPos += 10 ) {
 and you have a row of circles.
 ![a row of red circles]({{ "/assets/images/rowRedCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
 
-everything
+everything that is in the loop code block gets reevaluated each time though the loop, so if we put `random()` in the loop we will get a new random number each loop cycle. For example,
+
+```javascript
+function draw() {
+
+    background( 150 );
+    randomSeed( 3247 );
+
+    let yPos = 20;
+
+    for( let xPos = 10; xPos < width; xPos += 10 ) {
+
+        fill( random(255), random(255), random(255) );
+        ellipse( xPos, yPos, 10, 10 );
+
+    }
+
+}
+```
+gives us a new color for each circle.
+![a row of red circles]({{ "/assets/images/rowRandomColorCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
+
+Great. What about a grid? What if I wanted to fill the entire canvas with circles?  We already have circles repeated in one dimension, the x dimension. We need to continue the pattern into 2 dimensions. This is easily done with a _nested_ for() loop- a for() loop inside of a for() loop, also sometimes referred to as an _embedded_ loop. To illustrate this, I'll quickly use another example:
+
+```javascript
+function draw() {
+
+    for ( let i = 0; i < 5; i++ ) {
+
+        console.log( i );
+
+    }
+
+}
+```
+
+This will print to the console the values of `i` each time through the loop.
+
+![a row of red circles]({{ "/assets/images/console_i.png" | prepend: site.baseurl }}){:height="180px" width="120px"}
+
+Now, lets put another for() loop _inside_ this loop.
+
+```javascript
+function draw() {
+
+    for ( let i = 0; i < 5; i++ ) {
+
+        console.log( i );
+
+        for ( let j = 0; j < 5; j++ ){
+
+            console.log( j );
+
+        }
+
+    }
+
+}
+```
+
+and look at the console output:
+
+![a row of red circles]({{ "/assets/images/console_ij.png" | prepend: site.baseurl }}){:height="390px" width="140px"}
+
+We see that for every __one__ cycle of the outer loop (the `i` loop), we go through the entire 5 iterations of the inner loop (the `j` loop).
+Think about it this way: one loop will take care of our x positions (columns) and one loop will take care of our y positions (rows).  So, the outer loop happens, say its the "x position" loop, we enter it and encounter the y position loop.  We draw circles for every y position at that x position ( filling in an entire column of circles). We then move on and advance the x position counter filling in the next column of circles.
+
+```javascript
+function draw() {
+
+    for ( let xPos = 10; xPos < width; xPos += 10 ) {
+
+        for ( let yPos = 10; yPos < height; yPos += 10 ) {
+
+            fill( random( 255 ), random( 255 ), random( 255 ) );
+            ellipse( xPos, yPos, 10, 10);
+
+        }
+
+    }
+
+}
+```
+![a row of red circles]({{ "/assets/images/gridCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
+
+_warning_
+- Make sure the condition in the for() loop will eventually be `false`. Don't do `for ( let xPos = 10; xPos < width; xPos -= 10 )` or `for ( let xPos = 10; xPos < width; xPos += 0 )` because, in this case, `xPos < width` will always be `true` because `xPos` would always be less than width. This will create an __infinite loop!__ BAD!
