@@ -122,7 +122,14 @@ You usually need 3 elements for a `while` and `do...while` loop.
 
 The `for` loop combines all three of these elements within the statement declaration, each separated by a `;`.
 
+```
+for ( counter; condition; update ) {
 
+    loop code block
+
+}
+```
+in practice,
 ```javascript
 for ( let x = 5; x < width; x += 5 ) {
 
@@ -155,3 +162,122 @@ The logic of the `for` loop works like this:
 Helpful links
 - [MDN for loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [w3 schools](https://www.w3schools.com/js/js_loop_for.asp)
+
+
+
+Lets look at another example.  
+
+If I wanted to create a circle somewhere on my canvas, I would do something like this:
+
+```javascript
+function draw() {
+
+    background( 220 );
+
+    let xPos = 20;
+    let yPos = 20;
+
+    // its a red circle
+    fill( 255, 0, 0 );
+    ellipse( xPos, yPos, 10, 10 );
+
+}
+```
+
+![a single red circle]({{ "/assets/images/singleRedCircle.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
+
+and if i wanted to make another circle right next to the one i just drew, I might do something like this:
+```javascript
+function draw() {
+
+    background( 220 );
+
+    let xPos = 20;
+    let yPos = 20;
+
+    // its a red circle
+    fill( 255, 0, 0 );
+    ellipse( xPos, yPos, 10, 10 );
+
+    xPos = xPos + 10;
+    ellipse( xPos, yPos, 10, 10 );
+
+}
+```
+
+where I give xPos the value of 20, draw a circle, then add 10 to the value of xPos, then draw another circle using that new (current) value of xPos
+
+![Two red circles]({{ "/assets/images/twoRedCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
+
+Super. so far so good, but what if I wanted to fill the entire _width_ of the canvas with red circles? Do I need to continuously copy and paste the commands to set xPos and draw a circle? like:
+
+```javascript
+function draw() {
+
+    background( 220 );
+
+    let xPos = 20;
+    let yPos = 20;
+
+    // its a red circle
+    fill( 255, 0, 0 );
+    ellipse( xPos, yPos, 10, 10 );
+
+    // 2
+    xPos = xPos + 10;
+    ellipse( xPos, yPos, 10, 10 );
+
+    // 3
+    xPos = xPos + 10;
+    ellipse( xPos, yPos, 10, 10 );
+
+    // 4
+    xPos = xPos + 10;
+    ellipse( xPos, yPos, 10, 10 );
+
+    // etc... etc...etc
+
+}
+```
+
+and etc, etc, etc until I fill the width of the canvas. This would certainly draw a row of circles, but this is not the best approach. It is time consuming, error prone, and really difficult to go back and augment. A better approach would be to use a for() loop.
+
+When creating a for() loop, you'll remember there are three parts:
+1. the counter
+2. condition
+3. update
+and really, maybe 4 parts:
+4. the code block
+
+so, a for() loop looks like:
+```
+for ( counter, condition, update ) {
+
+    loop code block
+
+}
+```
+
+With this for() loop we will:
+1. set the counter to correspond to the xPos of the circles.
+2. the condition is where we would like the counter to stop, in this case when we reach `width`
+3. we will update the counter to be how far apart the circles will be drawn, the vertical spacing
+
+So, we have a for() loop that loops like:
+
+```javascript
+
+let yPos = 20;
+
+fill( 255, 0, 0 );
+for( let xPos = 10; xPos < width; xPos += 10 ) {
+
+  ellipse( xPos, yPos, 10, 10 );
+
+}
+```
+
+and you have a row of circles.
+![a row of red circles]({{ "/assets/images/rowRedCircles.png" | prepend: site.baseurl }}){:height="400px" width="400px"}
+
+everything
