@@ -12,14 +12,14 @@
 // let xspeed
 // let ySpeed
 // we will have:
-let location;  // a vector-- position( x, y )
+let position;  // a vector-- position( x, y )
 let velocity;  // speed( x, y )
 
 function setup() {
 
     createCanvas( 600, 600 );
 
-    location = createVector( width /2, height / 2 );
+    position = createVector( width /2, height / 2 );
     velocity = createVector( 5, 3 );
 
 }
@@ -33,14 +33,14 @@ function draw() {
 
     checkWalls();
 
-    location.add( velocity );
+    position.add( velocity );
 
     fill( 0, 255, 200 );
-    ellipse( location.x, location.y, 10, 10 );
+    ellipse( position.x, position.y, 10, 10 );
 
 }
 
-
+// moved check walls to its own function
 function checkWalls() {
 
     // right
