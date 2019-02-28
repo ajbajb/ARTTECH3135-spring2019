@@ -2,7 +2,7 @@
 'use strict'
 
 let movers = [];
-const numMovers = 1;
+const numMovers = 100;
 
 function setup() {
 
@@ -13,6 +13,8 @@ function setup() {
         createMover();
 
     }
+
+    console.log( movers );
 
 }
 
@@ -33,12 +35,11 @@ function createMover() {
 
     let mover = new Mover();
     mover.position = createVector( 100, 100 );
-    mover.mass = random( 0.1, 1.0 );
+    mover.mass = random( 0.1, 2.0 );
     mover.col = color( random( 255 ), random( 255 ), random( 255 ) );
 
     movers.push( mover );
 
-    console.log( mover );
 
 }
 
@@ -49,9 +50,9 @@ function Mover() {
     this.acceleration = createVector( 0, 0 );
 
     this.mass = 0.5;
-    this.size = function() {
-        return this.mass * 10;
-    }
+    // this.size = function() {
+    //     return this.mass * 10;
+    // }
     this.topSpeed = 20;
     this.col = color( 255, 200, 0 );
 
@@ -67,7 +68,7 @@ function Mover() {
 
         noStroke();
         fill( this.col );
-        ellipse( this.position.x, this.position.y, this.size(), this.size() );
+        ellipse( this.position.x, this.position.y, this.mass * 10, this.mass*10 );
 
     }
 
