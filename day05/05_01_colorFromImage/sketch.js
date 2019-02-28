@@ -11,7 +11,7 @@ let img;
 let count = 0;
 
 
-// this is out example sorted array
+// this is our example sorted array
 let sorted = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
 // function to shuffle an array!
@@ -32,7 +32,7 @@ function preload() {
     // } );
 
 
-    img = loadImage( 'assets/HighResCat.jpg', finished() );
+    img = loadImage( 'assets/Fairytale.jpg', finished() );
 
     function finished() {
         console.log( "image has loaded " );
@@ -63,8 +63,8 @@ function setup() {
             mover.position = createVector( x, y );
             mover.mass = random( .1, 5 );
             mover.col = color(
-                red( colorAtLocation ),
                 green( colorAtLocation),
+                red( colorAtLocation ),  // you can shift color channels
                 blue( colorAtLocation ),
                 80 );
 
