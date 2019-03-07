@@ -38,8 +38,8 @@ function setup() {
     console.log( locData );
 
     // the the current position and map it to the screen coordinates
-    startLong = map(long, -180, 180, 0, height );
-    startLat = map(lat, -180, 180, 0, width );
+    startLong = map(long, -180, 180, 0, width );
+    startLat = map(lat, 90, -90, 0, height );
 
     // set the font for our text
     textFont( font );
@@ -98,7 +98,7 @@ function getLocation() {
 
 let chiTown = {
 
-    long: 41.85003,
-    lat: -87.65005
+    lat: 41.85003,
+    long: -87.65005
 
 }
