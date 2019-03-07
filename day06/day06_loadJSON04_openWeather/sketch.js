@@ -1,5 +1,6 @@
 
 // loading JSON from the web
+// get your key from https://home.openweathermap.org/
 
 let data;
 let font;
