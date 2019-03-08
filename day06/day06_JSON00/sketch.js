@@ -4,11 +4,20 @@ function setup() {
 
     createCanvas( 400, 400 );
 
+    console.log( rocks );
+    console.log( words );
+    console.log( words[0] );
+    console.log( words[0].word );
+
 }
 
 function draw() {
 
     background( 0 );
+
+    fill( rocks.r, rocks.g, rocks.b );
+    ellipse( 50, 50, 25, 100 );
+
     fill( words[0].r, words[0].g, words[0].b );
     textSize( words[0].size );
     text( words[0].word, 100, 100 );
@@ -23,11 +32,11 @@ function draw() {
 // key: value pairs
 let rocks = {
 
-    r: 120,
-    g: 220,
+    r: 250,
+    g: 20,
     b: 50
 
-}
+};
 
 
 // values can be anything

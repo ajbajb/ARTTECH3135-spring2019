@@ -1,5 +1,6 @@
 
 // loading JSON from the web
+// http://api.open-notify.org
 
 let data;
 let font;
@@ -52,22 +53,25 @@ function draw() {
 
     background( 0 );
 
-    // map the current long and lat values from our data
-    let mappedLong = map( long, -180, 180, 0, width );
-    let mappedLat = map( lat, 90, -90, 0, height );
-    console.log( "mL " + mappedLong + " " + "mLat " + mappedLat );
-
-
     // every 600 frames pull data out of the new JSON file
+    // Not the best approach. Better would be to use millis()
+    // or setTimeout()
     if ( frameCount % 600 === 0 ) {
 
         getLocation();
 
     }
 
+    // map the current long and lat values from our data
+    let mappedLong = map( long, -180, 180, 0, width );
+    let mappedLat = map( lat, 90, -90, 0, height );
+    console.log( "mL " + mappedLong + " " + "mLat " + mappedLat );
+
+    // map the long and lat of chicago to the screen
     let mappedChiLong = map( chiTown.long, -180, 180, 0, width );
     let mappedChiLat = map( chiTown.lat, 90, -90, 0, height );
 
+    // display where Chicago is
     fill( 255, 0, 255 );
     ellipse( mappedChiLong, mappedChiLat, 5, 5 );
 
@@ -78,8 +82,6 @@ function draw() {
     // display where it is now currently
     fill( 255, 0, 0 );
     ellipse( mappedLong, mappedLat, 10, 10 );
-
-
 
 }
 
