@@ -24,12 +24,16 @@ permalink: /resources/
 
 ### General
 - [The Art of Computer Designing](https://archive.org/details/satoArtOfComputerDesigning/page/n1)
+- [Glitch Studies Manifesto](https://amodern.net/wp-content/uploads/2016/05/2010_Original_Rosa-Menkman-Glitch-Studies-Manifesto.pdf){: target= '_ blank'}
+- [21st Century Digital Art](http://www.digiart21.org/){: target= '_ blank'}
+- [Eyeo](http://eyeofestival.com/){: target= '_ blank'}
+- [Creative Applications](https://www.creativeapplications.net/){: target= '_ blank'}
 
 ### Student Code
 - Howard
     - [Assignment 4- Cube](https://editor.p5js.org/hawazd77/sketches/FJ0hEJYxy){: target= '_ blank'}
-    - [Assignment 3](https://editor.p5js.org/hawazd77/sketches/KC50N-xyR)
-    - [Kingly Horses](https://editor.p5js.org/hawazd77/sketches/k55UHFf-V)
+    - [Assignment 3](https://editor.p5js.org/hawazd77/sketches/KC50N-xyR){: target= '_ blank'}
+    - [Kingly Horses](https://editor.p5js.org/hawazd77/sketches/k55UHFf-V){: target= '_ blank'}
 
 - Kate
     - [Assignment 4- 04Homework02](https://editor.p5js.org/KateSmith/sketches/EcufnZG6Z){: target= '_ blank'}
