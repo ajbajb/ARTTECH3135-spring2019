@@ -3,13 +3,17 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+    
     ofSetWindowShape(640+320, 480);
     grabber.setup( 640, 480);
     gw = grabber.getWidth();
     gh = grabber.getHeight();
     
+    // load a movie file
+    // file should be in project's bin/data folder
     player.load("Blooming.mp4");
-    
+    // or set an absolute path ( but dont )
+    // /Users/adambach/Programming/of_v20190319_osx_release/ARTTECH3135-spring2019/code_day09/09_04_basicThreshold_videoFlipper/bin/data
     grayPix.allocate(gw, gh, OF_PIXELS_GRAY);
 
 }
@@ -61,8 +65,8 @@ void ofApp::draw()
     {
         for (int y = 0; y < gh; y += step)
         {
-            int bright = grayPix.getColor(x, y).getBrightness();
-            float rotation = ofMap(bright, 0, 255, 0., 180. );
+            ofColor bright = grayPix.getColor(x, y);
+            float rotation = ofMap(bright.r, 0, 255, 0., 180. );
             
             //set squares color from the videoplayer
             ofColor vidColor = vidPix.getColor(x, y);

@@ -21,9 +21,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    
-    ofVideoGrabber grabber;
-    ofVideoPlayer player;
+    ofVideoGrabber grabber; // grabber is our camera
+    ofVideoPlayer player;   // player plays the movie
     int gw;
     int gh;
     

@@ -3,21 +3,26 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+    // sets app window size
     ofSetWindowShape(640*2, 480);
     grabber.setup(640, 480);
     
     gw = grabber.getWidth();
     gh = grabber.getHeight();
     
+    // allocate pixels-- they are only one channel
     grayPix.allocate(gw, gh, OF_PIXELS_GRAY);
     grayTex.allocate(gw, gh, GL_LUMINANCE);
     
+    // give initial threshold value
     threshold = 125;
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
+    // set threshold based on mouseX position
+    // we map mouseX position to the range of 0-255
     threshold = ofMap(ofGetMouseX(), 0, ofGetWidth(), 0, 255);
     
     grabber.update();
@@ -27,6 +32,7 @@ void ofApp::update()
         {
             for (int y = 0; y < gh; y++)
             {
+                // get the brightness value for current pixel
                 int brightness = grabber.getPixels().getColor(x, y).getBrightness();
                 
                 if (brightness > threshold)
