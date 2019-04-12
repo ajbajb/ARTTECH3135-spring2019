@@ -43,7 +43,7 @@ permalink: /resources/
 - Bill
     - [GIF V3](https://editor.p5js.org/PJBill/sketches/hdxuwyWdJ){: target= '_ blank'}
     - [DF V2](https://editor.p5js.org/PJBill/sketches/K9Eoo96HO){: target= '_ blank'}
-    - [03_clockInClass](https://editor.p5js.org/PJBill/sketches/SQEV-7VGj){: target= '_ blank'}
+    - [03_clockInClass](https://editor.p5js.org/PJBill/sketches/SQEV-7VGj)
 
 - Ezgi
     - [Dots](https://editor.p5js.org/eates/embed/K6dqp5FI5){: target= '_ blank'}
@@ -56,7 +56,7 @@ permalink: /resources/
     - [hw03](https://editor.p5js.org/mflitman/sketches/CfhU0y3xc){: target= '_ blank'}
 
 - Jeanette
-    - [feb20_sin](https://editor.p5js.org/jeanettewells/sketches/){: target= '_ blank'}
+    - [feb20_sin](https://editor.p5js.org/jeanettewells/sketches/)
     - [clock](https://editor.p5js.org/jeanettewells/sketches/gVWzdjmXm){: target= '_ blank'}
     - [drawing Interpretation](https://editor.p5js.org/jeanettewells/sketches/){: target= '_ blank'}
 
