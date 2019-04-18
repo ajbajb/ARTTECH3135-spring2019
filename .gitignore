@@ -28,7 +28,7 @@ __*
 
 raw/
 models/
-data/
+# data/
 libs/dlib/
 
 *_XX*
